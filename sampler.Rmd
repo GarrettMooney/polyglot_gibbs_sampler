@@ -1,0 +1,13 @@
+---
+output: html_document
+___
+
+## Bivariate function:  
+$f(x,y) = kx^2\exp\{-xy^2-y^2+2y-4x\},\qquad x>0,y\in\mathbb{R}$
+
+## Conditionals:
+$\displaystyle x|y \sim Ga(3,y^2+4)$  
+$\displaystyle y|x \sim N\left(\frac{1}{1+x},\frac{1}{2(1+x)}\right)$  
+
+## Sampler: 
+Gibbs sampler with thin of 1000 and sample of 50000
