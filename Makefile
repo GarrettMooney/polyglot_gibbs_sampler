@@ -11,6 +11,9 @@ gibbs : gibbs.c
 datac.tab : gibbs
 	./$< > $@
 
+datajs.tab : gibbs.js
+	node $< > $@
+
 datapy.tab : gibbs.py
 	python3 $< > $@
 
