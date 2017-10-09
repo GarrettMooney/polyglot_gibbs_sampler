@@ -3,7 +3,7 @@ all : data sampler.html
 
 # sampler data
 .PHONY : data
-data : datac.tab datapy.tab data.tab
+data : datac.tab datajs.tab datapy.tab datajl.tab data.tab
 
 gibbs : gibbs.c
 	gcc -O4 $< -lgsl -lgslcblas -lm -o $@
@@ -16,6 +16,9 @@ datajs.tab : gibbs.js
 
 datapy.tab : gibbs.py
 	python3 $< > $@
+
+datajl.tab : gibbs.jl
+	julia $< > $@
 
 data.tab : gibbs.R
 	Rscript $< > $@
