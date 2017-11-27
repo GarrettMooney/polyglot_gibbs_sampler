@@ -1,8 +1,8 @@
 var jStat = require('jStat').jStat;
 
 function gibbs(N, thin) {
-    var x = 0;
-    var y = 0;
+    var x = 0.0;
+    var y = 0.0;
     console.log("Iter  x  y");
     for (i=0;i<N;i++) {
         for (j=0;j<thin;j++) {
